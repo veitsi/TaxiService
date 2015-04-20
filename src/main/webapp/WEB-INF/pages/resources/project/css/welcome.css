@@ -1,0 +1,11 @@
+.welcome {
+    background: url(../img/Taxi.jpg) no-repeat center;
+    /*background-color: #000000;*/
+}
+
+.modal-body {
+    max-width: 500px;
+    align-items: center;
+}
+
+
