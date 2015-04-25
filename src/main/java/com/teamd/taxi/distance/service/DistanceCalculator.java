@@ -60,6 +60,7 @@ public class DistanceCalculator {
 	}
 
 	public static String getJson(String pageAddress) throws Exception {
+		//some comment here
 		StringBuilder sb = new StringBuilder();
 		URL pageURL = new URL(pageAddress);
 		URLConnection uc = pageURL.openConnection();
