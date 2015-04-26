@@ -11,4 +11,8 @@ public class MainTest extends Assert {
     public void testHello() {
         System.out.println("hello test");
     }
+    @Test
+    public void testHello2() {
+        System.out.println("hello test2");
+    }
 }
