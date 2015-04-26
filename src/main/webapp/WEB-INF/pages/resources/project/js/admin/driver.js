@@ -10,9 +10,7 @@ var selectInput = '<select class="form-control-auto-size"><option>Anton Antonov<
 
 var saveDriverButton = '<button type="button" onclick="" data-toggle="modal" data-target="#" data-driver-id="" class="btn btn-primary btn-sm">Save changes</button>';
 var saveCarButton = '<button type="button" onclick="" data-toggle="modal" data-target="#" data-driver-id="" class="btn btn-primary btn-sm">Save changes</button>';
-var cancelDriverButton = '<button type="button" onclick="cancelCarlEdit(event)" class="btn btn-default btn-sm">Cancel</button>';
-var cancelCarButton = '<button type="button" onclick="cancelCarlEdit(event)" class="btn btn-default btn-sm">Cancel</button>';
-
+var cancelButton = '<button type="button" onclick="cancelEdit(event)" class="btn btn-default btn-sm">Cancel</button>';
 
 var radioInput = '<label class="radio-inline"><input type="radio" name="driver_new_gender" value="man">Man</label><label class="radio-inline"><input type="radio" name="driver_new_gender" value="woman">Woman</label>';
 //var driverInfo = '<tr class="hidden driver-info"><td colspan="8" class="driver-panel"><div id="collapseThree" class="collapse" aria-expanded="false"><div class="panel-body driver-panel"><div class="row"><div class="col-md-6"><h3 class="sm-hr">Driver:</h3><div class="form-group"><label class="control-label">Last Name:</label></div><div class="form-group"><label class="control-label">First Name:</label></div><div class="form-group"><label class="control-label">E-mail:</label></div><div class="form-group"><label class="control-label">Gender:</label></div><div class="form-group"><label class="control-label">No Smoke:</label></div><div class="form-group"><label class="control-label">License serial:</label></div><div class="form-group"><label class="control-label">License due:</label></div></div><div class="col-md-6"><h3 class="sm-hr">Car:</h3><div class="form-group"><label class="control-label">Model:</label>Aston Martin DB9</div><div class="form-group"><label class="control-label">Class:</label>Premium</div><div class="form-group"><label class="control-label">Wi-Fi:</label>Yes</div><div class="form-group"><label class="control-label">Transportation of animals:</label>No</div><div class="form-group"><label class="control-label">Conditioner:</label>Yes</div><div class="form-group"><label class="control-label">Smoking in car:</label>No</div></div></div></div><div class="row hide-driver-info" align="center" onclick="closeDriverInfo(event)"><span class="glyphicon glyphicon-chevron-up btn-lg" aria-hidden="true"></span></div></div></td></tr>';
@@ -159,7 +157,7 @@ function startEditCar(node) {
     smoke.after(formControl);
     smoke.next().append(selectInput);
 
-    smoke.next().after(cancelCarButton);
+    smoke.next().after(cancelButton);
     smoke.next().after(' ');
     smoke.next().after(saveCarButton);
 }
@@ -226,7 +224,7 @@ function startEditDriver(node) {
 
     var lastElem = licenseDue.closest('div');
 
-    lastElem.after(cancelDriverButton);
+    lastElem.after(cancelButton);
     lastElem.after(' ');
     lastElem.after(saveDriverButton);
     lastElem.after('<br>');
@@ -247,14 +245,7 @@ function createDriver() {
     //TODO Ajax here
 }
 
-function cancelCarlEdit(node) {
-    var record = $(node.target).closest('div');
-    var normalState = record.next().html();
-    record.html(normalState);
-    record.next().remove();
-}
-
-function cancelDriverEdit(node) {
+function cancelEdit(node) {
     var record = $(node.target).closest('div');
     var normalState = record.next().html();
     record.html(normalState);
