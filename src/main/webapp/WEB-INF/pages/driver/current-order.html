@@ -1,0 +1,151 @@
+<!-- avtor Ivaniv Ivan 23.04.2015 version(1.0)-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome driwer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="authorisation form">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../../../../../../../../Desktop/pages/resources/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../../../../../../Desktop/pages/resources/project/css/welcomeDriver.css">
+    <script src="../../../../../../../../Desktop/pages/resources/jquery/jquery-2.1.3.js"></script>
+    <script src="../../../../../../../../Desktop/pages/resources/bootstrap/js/bootstrap.js"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    
+  </head>
+</head>
+<body>
+<!--common navigation bar for this service -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Smart Taxi</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../../../../../../../../Desktop/pages/queue.html">Queue</a></li>
+                <li><a href="#history">History</a></li>
+                <li  class="active"><a href="current-order.html">Current order</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-warning">Sign out</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="jumbotron welcome">
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <h2>Current order</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="jumbotron col">
+        <div class="row">
+            <div class="col">
+                <div class="col-md-5" >
+                    <form role="form">
+                        <div class="form-group">
+                            <h3><span class="label label-primary" for="curLocation">Current location</span></h3>
+                            <input type="text" class="form-control" id="curLocation" placeholder="Current location">
+                        </div>
+                        <div class="form-group">
+                            <h3><span class="label label-primary" for="sourceLocation">Source location</span></h3>
+                            <input type="text" class="form-control" id="sourceLocation" placeholder="Source location">
+                        </div>
+                        <div class="form-group">
+                            <h3><span class="label label-primary" for="destLocation">Destination location</span></h3>
+                            <input type="text" class="form-control form-info" id="destLocation" placeholder="Destination location">
+                        </div>
+                    </form>
+                    <div class="input-group col-md-5">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control" id="price" placeholder="Price">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+                    <br>
+                    <div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"><h3 class="panel-title">Additional information </h3></div>
+                            <div class="panel-body">
+                                <p>Description request....</p>
+                            </div>
+                        </div>
+                    </div>  
+                    
+                </div>
+                <hr>
+
+                <div class="col">
+                    <div class="col-md-7 pull-right">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"><h3 class="panel-title">Map</h3></div>
+
+                            <div class="panel-body col">
+                                <p>Map....</p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                       </div>
+                    </div>  
+                     <div class="col-md-3 pull-left">
+                
+                        <div><i class="glyphicon glyphicon-ok-sign"> Non smoking</i></div>
+                        <div><i class="glyphicon glyphicon-ok-sign"> WiFI</i></div>
+                        <div><i class="glyphicon glyphicon-ok-sign"> Male</i></div>
+                       
+                    </div> 
+                </div>    
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3 pull-left">
+                <button type="submit" class="btn btn-success" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-ok"> Accept</span>
+                </button>
+               
+            </div>
+            <div class="col-md-3 pull-midlle">
+                <a class="btn btn-danger" href="../../../../../../../../Desktop/pages/queue.html"><span class="glyphicon glyphicon-remove" aria-hidden="true"> Close</span></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <p>&#169 TeamD 2015</p>
+    </footer>
+</div>
