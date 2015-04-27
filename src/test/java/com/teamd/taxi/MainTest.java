@@ -15,8 +15,4 @@ public class MainTest extends Assert {
     public void testHello2() {
         System.out.println("hello test2");
     }
-    @Test
-    public void testHello3() {
-        System.out.println("hello test3");
-    }
 }
