@@ -17,9 +17,9 @@ public final class DistanceCalculator {
 	public static void main(String args[]) {
 		System.out.println("distance="
 				+ calculateDistance("Киев, Крещатик 1",
-						"Киев, проспект победы 22"));
+						"Киев, проспект победы 22")); //6266
 		System.out
-				.println("distance=" + calculateDistance("50.45,31", "50,30"));
+				.println("distance=" + calculateDistance("50.45,31", "50,30"));//115384
 	}
 
 	public static int calculateDistance(String a, String b) {
